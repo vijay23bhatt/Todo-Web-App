@@ -1,0 +1,40 @@
+﻿@model IEnumerable<To_DoApp.Models.Task>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.taskTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskEndTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isDone)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.taskTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaskEndTime)
+            </td>
+            <td>
+                @Html.CheckBoxFor(modelItem => item.isDone, new { id = item.id , @class = "ActiveCheck" })
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+               
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>
+<script src="~/Custom/AddCheckBoxListener.js"></script>

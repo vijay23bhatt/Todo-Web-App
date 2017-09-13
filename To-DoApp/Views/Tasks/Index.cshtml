@@ -1,0 +1,37 @@
+﻿@model To_DoApp.Models.Task
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+<div id="tableDiv">
+</div>
+
+<div id="todoCreateForm">
+    @using (Ajax.BeginForm("AJAXCreate", "Tasks", new AjaxOptions
+    {
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "POST",
+        UpdateTargetId = "tableDiv"
+    }))
+    {
+        <div class="form-group">
+            @Html.AntiForgeryToken()
+            @Html.LabelFor(model => model.taskTitle, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.taskTitle, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.taskTitle, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Custom/BuildTable.js"</script>
+    @Scripts.Render("~/bundles/Jqueryval")
+    }
+        

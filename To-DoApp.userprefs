@@ -1,0 +1,13 @@
+﻿<Properties StartupConfiguration="{33113597-7A97-498E-B360-075DCCC0E36E}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="To-DoApp/Views/Home/Contact.cshtml">
+    <Files>
+      <File FileName="To-DoApp/Views/Home/Contact.cshtml" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
